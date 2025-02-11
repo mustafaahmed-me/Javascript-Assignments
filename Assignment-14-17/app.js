@@ -150,14 +150,19 @@ document.write ("String: "  + "<br />" + arrStr + "<br />"  + "<br />");
 // Question-16
 let colors = ["red","blue","green"];
 document.write(colors  + "<br />");
+
 colors.unshift(prompt("Add color on begining"));
 document.write(colors  + "<br />");
+
 colors.push(prompt("Add color on last"));
 document.write(colors  + "<br />");
-colors.unshift(prompt("Add two or more color on begining"));
+
+colors.unshift(prompt("Add one more color on begining"));
 document.write(colors  + "<br />");
+
 colors.shift();
 colors.pop();
 document.write(colors  + "<br />");
+
 colors.splice(2,2,"purple");
 document.write(colors);
