@@ -166,3 +166,17 @@ document.write(colors  + "<br />");
 
 colors.splice(2,2,"purple");
 document.write(colors);
+
+
+
+
+// Question-17
+let phones = ['apple', 'samsung', 'oppo'];
+let ele = `
+<select>
+    <option>${phones[0]}</option>
+    <option>${phones[1]}</option>
+    <option>${phones[2]}</option>
+</select>
+`;
+document.write(ele);
