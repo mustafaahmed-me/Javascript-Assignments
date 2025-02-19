@@ -125,12 +125,12 @@ else {
 }
 
 let bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
-let userInput = prompt("Enter the item you want to search:").toLowerCase();
+let usrInput = prompt("Enter the item you want to search:").toLowerCase();
 
-if (bakeryItems.includes(userInput)) {
-    alert(userInput + " is available in the bakery.");
+if (bakeryItems.includes(usrInput)) {
+    alert(usrInput + " is available in the bakery.");
 } else {
-    alert(userInput + " is not available in the bakery.");
+    alert(usrInput + " is not available in the bakery.");
 }
 
 
@@ -143,111 +143,104 @@ for(let i = 5; i <= 100; i = i + 5 ){
 
 
 // Question-11
-// let count = [1,2,3,4,5,6,7,8,9,10];
-// document.write("<h1>  Counting: </h1>");
-// document.write(count);
-// let countRev = count.reverse();
-// document.write("<h1> Reverse Counting: </h1>");
-// document.write(countRev);
-// let countEven = count;
-// document.write("<h1> Reverse Counting: </h1>");
-// document.write(countRev); // not done
+let count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+for ( let i = 0; i < count.length; i++){
+    if (count[i] % 2 === 1) {
+        document.write(i + "   is even <br />");
+
+    }
+    else {
+        document.write(i + " is odd <br />");
+    }
+}
+document.write("<h1>  Counting: </h1>");
+document.write(count);
+let countRev = count.reverse();
+document.write("<h1> Reverse Counting: </h1>");
+document.write(countRev);
 
 
 
 
 // Question-12
-// let students = ["Mustafa", "Ali", "Ahmed", "Bilal"];
-// let scores = [78,65,49,57];
-// let result = [];
+let students = ["Mustafa", "Ali", "Ahmed", "Bilal"];
+let scores = [78,65,49,57];
 
-// for (let i = 0; i < students.length; i++) {
-
-//     for (let j = 0; j < scores.length; j++) {
-//         let fullResult =` ${students[i] + scores[j]}`;
-//         result.push(fullResult);
-//     }
-// }
-
-// document.write ("<td>" + result + "</td>");
-// document.write(`<table>
-//                 <tr>
-//                 <td>
-//                 ${result}
-//                 </td>
-//                 </tr>
-//                 </table>`);
-//     // document.write("");
-// document.write("");
+for (let i = 0; i < students.length; i++) {
+    let result = students[i] + scores[i];
+    document.write(result);
+}
 
 
-
-document.body.innerHTML += `
-    <table border="1">
-        <tr>
-            <th>Students</th>
-            <th>Scores</th>
-        </tr>
-        <tr>
-            <td>Ali</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Sara</td>
-            <td>45</td>
-        </tr>
-        <tr>
-            <td>Mustafa</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>Bilal</td>
-            <td>70</td>
-        </tr>
-    </table>
-`;
-
-
-
-
-
-// Question-12
-// let A = [ [1,2,3] , [4,5,6] , [7,8,9]];
-
-// for ( let i =0; i < A.length; i++){
-
-//     for ( let J =0; J < A.length; J++){
-
-//     }
-// }    not done
 
 
 
 // Question-13
-// let numList = [4,3,2,1]
-// let yourNum = +prompt("Enter a number");
-// let totalNum  = []
+let dimArr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-// for( let i = 0; i < numList.length; i++){
-//     let fullNum = `${numList[i],yourNum}`;
-//     totalNum.push(fullNum);
-// }
-// document.write(totalNum);
-// not done
+for (let i = 0; i < dimArr.length; i++) {
+    let insideArr = dimArr[i];
+    for (let j = 0; j < insideArr.length; j++) {
+        console.log(insideArr[j]);
+    }
+
+}   
+
+ 
 
 
 // Question-14
-// let nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-// // let evenNum = false;
+let nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
-// for ( let i = 0; i < nums.length; i++){
-//     if (nums[i] % 2 === 0) {
-//         // evenNum = true;
-//         document.write (nums);
-//     }
-// }
+for ( let i = 0; i < nums.length; i++){
+    if (nums[i] % 2 === 0) {
+        console.log(i + " is even");
 
-// // if (evenNum){
-    
-// // }
-// not done 
+    }
+    else {
+        console.log(i + " is odd");
+    }
+}
+
+
+
+// Question-15
+let numArr = [24, 53, 78, 91, 12, 1000, 900, 7943];
+let lrgNum;
+let smlNum;
+
+for (let i = 0; i < numArr.length; i++) {
+    let currentNum = numArr[i];
+    if (!lrgNum || currentNum > lrgNum) {
+        lrgNum = currentNum;
+    }
+
+    if (!smlNum || currentNum < smlNum) {
+        smlNum = currentNum;
+    }
+}
+
+console.log(lrgNum, smlNum);
+
+
+
+
+// Question-16
+let userInput = +prompt('enter number');
+let multiple = 1;
+
+for (let i = 1; i <= userInput; i++) {
+    console.log(i);
+    multiple = multiple * i;
+    // multiple *= i;
+}
+console.log(multiple);
+
+
+
+
+// Question-17
+let myNum = [5,4,3,2,1];
+for (let i = 0; i < myNum.length; i = i + 0.5) {
+    console.log(i);
+}
