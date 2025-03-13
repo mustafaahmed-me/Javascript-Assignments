@@ -97,10 +97,28 @@ The division of two number is: .4
 The modulus of two number is: 5
 */
 
-let num1 = +prompt('enter a number');
-let num2 = +prompt('enter another number');
+// let num1 = +prompt('enter a number');
+// let num2 = +prompt('enter another number');
 
-document.write("The sum of two number is: " + (num1 + num2) + "</br>");
-document.write("The sum of two number is: ", num1 - num2);
+// document.write("The sum of two number is: " + (num1 + num2) + "</br>");
+// document.write("The sum of two number is: ", num1 - num2);
 // console.log ("The sum of two number is: " + (num1 + num2) + "\n");
 // console.log ("The sum of two number is: " + (num1 + num2) );
+
+
+
+
+
+let isOriginal = true; // Track which image is currently shown
+
+function changeImg() {
+    let imgEl = document.getElementById("myImage");
+
+    if (isOriginal) {
+        imgEl.src = "ii.jpg"; // Change to new image
+    } else {
+        imgEl.src = "images.jpg"; // Change back to original
+    }
+
+    isOriginal = !isOriginal; // Toggle state
+}
